@@ -1,8 +1,6 @@
-function safeName(s) 
-{
-	return s.toLowerCase().replace(/[^a-z0-9_]/gi, '');
-}
 
+// Returns the first property of an object
+	
 function firstProp(obj) 
 {
 	var first = true;
@@ -11,6 +9,9 @@ function firstProp(obj)
 		first = false;
 	}
 }
+
+
+// Returns the property following a specified property of an object
 
 function findNext(where, now) 
 {
@@ -27,10 +28,8 @@ function findNext(where, now)
 	return next;
 }
 
-function inArray(needle, haystack) 
-{
-	return ((','+haystack.toString()+',').indexOf(','+needle+',')!==-1)
-}
+
+// Returns the number of properties in an object
 
 function numKeys(obj)
 {
@@ -40,4 +39,12 @@ function numKeys(obj)
         count++;
     }
     return count;
+}
+
+
+// Checks if an array contains a certain value
+
+function inArray(needle, haystack) 
+{
+	return ((','+haystack.toString()+',').indexOf(','+needle+',')!==-1)
 }
